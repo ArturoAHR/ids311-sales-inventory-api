@@ -23,7 +23,7 @@ export class ItemService {
     return await this.itemRepository.updateItem(itemDto);
   };
 
-  deleteItem = async (id): Promise<Item> => {
+  deleteItem = async (id: string): Promise<Item> => {
     return await this.itemRepository.deleteItem(id);
   };
 }
