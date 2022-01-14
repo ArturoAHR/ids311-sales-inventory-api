@@ -11,7 +11,6 @@ export class usuarios1642155099100 implements MigrationInterface {
             type: 'uuid',
             isNullable: false,
             isPrimary: true,
-            default: 'uuid_generate_v4()',
           },
           {
             name: 'nombre',

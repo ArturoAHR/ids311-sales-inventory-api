@@ -11,7 +11,6 @@ export class ventas1642155730045 implements MigrationInterface {
             type: 'uuid',
             isNullable: false,
             isPrimary: true,
-            default: 'uuid_generate_v4()',
           },
           {
             name: 'idItem',

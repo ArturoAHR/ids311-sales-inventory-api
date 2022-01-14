@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
-import { CreateDateColumn, PrimaryGeneratedColumn } from "typeorm";
+import { CreateDateColumn, PrimaryColumn} from "typeorm";
 
 export class BaseEntity {
-	@PrimaryGeneratedColumn('uuid')
+	@PrimaryColumn()
 	id: string;
 
 	@CreateDateColumn({

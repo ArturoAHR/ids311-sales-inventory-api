@@ -11,7 +11,6 @@ export class pagos1642156076824 implements MigrationInterface {
             type: 'uuid',
             isNullable: false,
             isPrimary: true,
-            default: 'uuid_generate_v4()',
           },
           {
             name: 'idUsuario',
