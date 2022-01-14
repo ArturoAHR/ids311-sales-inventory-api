@@ -6,6 +6,7 @@ import { UserModule } from './modules/user/user.module';
 import * as dotenv from 'dotenv';
 import { ItemModule } from './modules/item/item.module';
 import { PaymentModule } from './modules/payment/payment.module';
+import { SaleModule } from './modules/sale/sale.module';
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ dotenv.config();
     UserModule,
     ItemModule,
     PaymentModule,
+    SaleModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.TYPEORM_HOST,
