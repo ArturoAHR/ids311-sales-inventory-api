@@ -11,10 +11,9 @@ export class items1642155401075 implements MigrationInterface {
             type: 'uuid',
             isNullable: false,
             isPrimary: true,
-            default: 'uuid_generate_v4()',
           },
           {
-            name: 'nombreItem',
+            name: 'nombre',
             type: 'varchar',
             isNullable: false,
           },

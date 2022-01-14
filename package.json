@@ -22,7 +22,8 @@
     "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./src/config/ormconfig.ts",
     "migration:run": "typeorm migration:run",
     "migration:revert": "typeorm migration:revert",
-    "seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli seed"
+    "seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli seed",
+    "seed:config": "ts-node ./node_modules/typeorm-seeding/dist/cli.js config --configName ormconfig.ts --root ./src/config/"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
