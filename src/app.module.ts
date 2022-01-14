@@ -4,12 +4,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './modules/user/user.module';
 import * as dotenv from 'dotenv';
+import { ItemModule } from './modules/item/item.module';
 
 dotenv.config();
 
 @Module({
   imports: [
     UserModule,
+    ItemModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.TYPEORM_HOST,
