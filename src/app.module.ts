@@ -3,6 +3,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './modules/user/user.module';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 @Module({
   imports: [
@@ -19,7 +22,6 @@ import { UserModule } from './modules/user/user.module';
         migrationsDir: process.env.TYPEORM_MIGRATIONS,
       },
       autoLoadEntities: true,
-      synchronize: true,
     }),
   ],
   controllers: [AppController],
