@@ -12,3 +12,6 @@
 ```npm run start```
 
 **Routes**
+
+```GET /user```
+- Gets all Users
