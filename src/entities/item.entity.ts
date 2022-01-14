@@ -1,4 +1,4 @@
-import { Entity, Column, BaseEntity, OneToMany } from 'typeorm';
+import { Entity, Column, OneToMany } from 'typeorm';
 import { CRUDEntity } from './crud.entity';
 import { Sale } from './sale.entity';
 

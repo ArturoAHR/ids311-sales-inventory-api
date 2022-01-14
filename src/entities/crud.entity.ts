@@ -1,4 +1,4 @@
-import { DeleteDateColumn, PrimaryGeneratedColumn } from 'typeorm';
+import { DeleteDateColumn } from 'typeorm';
 import { BaseEntity } from './base.entity';
 
 export class CRUDEntity extends BaseEntity {
