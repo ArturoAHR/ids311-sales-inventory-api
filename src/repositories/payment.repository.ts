@@ -1,4 +1,3 @@
-import { randomUUID } from 'crypto';
 import { PaymentDTO } from 'src/dto/payment.dto';
 import { assign } from 'src/utils/object-manipulation';
 import { EntityRepository, Repository } from 'typeorm';
@@ -22,7 +21,7 @@ export class PaymentRepository extends Repository<Payment> {
   }
 
   async createPayment(paymentDto: PaymentDTO): Promise<Payment> {
-    paymentDto.id = randomUUID();
+    if (!paymentDto.id) throw TypeError();
     const payment = new Payment();
     assign(payment, paymentDto);
     await this.save(payment);
