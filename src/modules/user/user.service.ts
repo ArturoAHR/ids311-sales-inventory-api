@@ -6,7 +6,7 @@ import { UserRepository } from 'src/repositories/user.repository';
 export class UserService {
   constructor(private readonly userRepository: UserRepository) {}
 
-  getUsers = (): Promise<User[]> => {
-    return this.userRepository.getUsers();
+  getUsers = async (): Promise<User[]> => {
+    return await this.userRepository.getAll();
   };
 }
