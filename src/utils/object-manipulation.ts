@@ -1,3 +1,3 @@
 export function assign(objectA, objectB) {
-  Object.keys(objectA).forEach((key) => (objectA[key] = objectB[key]));
+  Object.keys(objectB).forEach((key) => (objectA[key] = objectB[key]));
 }
