@@ -47,7 +47,6 @@ export class UserRepository extends Repository<User> {
     const userDto = new UserDTO();
     userDto.id = id;
     userDto.deletionDate = new Date();
-    console.log(userDto);
     return await this.updateUser(userDto);
   }
 }

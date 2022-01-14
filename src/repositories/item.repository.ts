@@ -47,7 +47,6 @@ export class ItemRepository extends Repository<Item> {
     const itemDto = new ItemDTO();
     itemDto.id = id;
     itemDto.deletionDate = new Date();
-    console.log(itemDto);
     return await this.updateItem(itemDto);
   }
 }
