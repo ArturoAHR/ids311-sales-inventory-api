@@ -1,6 +1,6 @@
 import { randomUUID } from 'crypto';
-import { UserDTO } from 'src/dto/user.dto';
-import { assign } from 'src/utils/object-manipulation';
+import { UserDTO } from '../dto/user.dto';
+import { assign } from '../utils/object-manipulation';
 import { EntityRepository, Repository } from 'typeorm';
 import { User } from '../entities/user.entity';
 
