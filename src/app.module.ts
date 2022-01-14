@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { UserModule } from './modules/user/user.module';
 import * as dotenv from 'dotenv';
 import { ItemModule } from './modules/item/item.module';
+import { PaymentModule } from './modules/payment/payment.module';
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ dotenv.config();
   imports: [
     UserModule,
     ItemModule,
+    PaymentModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.TYPEORM_HOST,
