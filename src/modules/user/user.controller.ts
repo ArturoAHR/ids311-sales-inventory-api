@@ -7,7 +7,6 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { SaleDTO } from 'src/dto/sale.dto';
 import { SalesDTO } from 'src/dto/sales.dto';
 import { UserDTO } from 'src/dto/user.dto';
 import { Payment } from 'src/entities/payment.entity';
