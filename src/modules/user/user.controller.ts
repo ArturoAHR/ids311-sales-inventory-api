@@ -7,7 +7,10 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
+import { SaleDTO } from 'src/dto/sale.dto';
+import { SalesDTO } from 'src/dto/sales.dto';
 import { UserDTO } from 'src/dto/user.dto';
+import { Payment } from 'src/entities/payment.entity';
 import { User } from 'src/entities/user.entity';
 import { UserService } from './user.service';
 
@@ -42,5 +45,13 @@ export class UserController {
   @Delete('/:id')
   async deleteUser(@Param('id') id: string): Promise<User> {
     return await this.userService.deleteUser(id);
+  }
+
+  @Post('/:id/payment')
+  async createUserPayment(
+    @Param('id') id: string,
+    @Body() salesDto: SalesDTO,
+  ): Promise<Payment> {
+    return await this.userService.createUserPayment(id, salesDto);
   }
 }
