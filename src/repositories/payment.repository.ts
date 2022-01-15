@@ -21,10 +21,15 @@ export class PaymentRepository extends Repository<Payment> {
   }
 
   async createPayment(paymentDto: PaymentDTO): Promise<Payment> {
-    if (!paymentDto.id) throw TypeError();
-    const payment = new Payment();
-    assign(payment, paymentDto);
-    await this.save(payment);
-    return payment;
+    try {
+      // if (!paymentDto.id || paymentDto.amount < 0.01) throw TypeError();
+      const payment = new Payment();
+      assign(payment, paymentDto);
+      await this.save(payment);
+      return payment;
+    } catch (error) {
+      //log
+      throw error;
+    }
   }
 }
