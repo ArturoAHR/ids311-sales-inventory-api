@@ -13,5 +13,16 @@
 
 **Routes**
 
+- /user
+
 ```GET /user```
 - Gets all Users
+```GET /user/:id```
+- Get User by ID
+```POST /user```
+- Create User
+```PUT /user/:id```
+- Update User
+```DELETE /user/:id```
+- Delete User
+

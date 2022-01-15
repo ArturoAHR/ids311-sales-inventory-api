@@ -3,10 +3,19 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './modules/user/user.module';
+import * as dotenv from 'dotenv';
+import { ItemModule } from './modules/item/item.module';
+import { PaymentModule } from './modules/payment/payment.module';
+import { SaleModule } from './modules/sale/sale.module';
+
+dotenv.config();
 
 @Module({
   imports: [
     UserModule,
+    ItemModule,
+    PaymentModule,
+    SaleModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.TYPEORM_HOST,
@@ -19,7 +28,6 @@ import { UserModule } from './modules/user/user.module';
         migrationsDir: process.env.TYPEORM_MIGRATIONS,
       },
       autoLoadEntities: true,
-      synchronize: true,
     }),
   ],
   controllers: [AppController],
