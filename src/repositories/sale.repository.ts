@@ -1,16 +1,9 @@
 import { randomUUID } from 'crypto';
 import { SaleDTO } from '../dto/sale.dto';
 import { assign } from '../utils/object-manipulation';
-import {
-  Between,
-  EntityRepository,
-  LessThan,
-  MoreThan,
-  Repository,
-} from 'typeorm';
+import { Between, EntityRepository, Repository } from 'typeorm';
 import { Sale } from '../entities/sale.entity';
-import { ReportDTO } from 'src/dto/report.dto';
-import { start } from 'repl';
+import { ReportDTO } from '../dto/report.dto';
 
 @EntityRepository(Sale)
 export class SaleRepository extends Repository<Sale> {
