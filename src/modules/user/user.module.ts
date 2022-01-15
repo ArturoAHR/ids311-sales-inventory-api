@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Item } from 'src/entities/item.entity';
-import { Payment } from 'src/entities/payment.entity';
-import { Sale } from 'src/entities/sale.entity';
-import { ItemRepository } from 'src/repositories/item.repository';
-import { PaymentRepository } from 'src/repositories/payment.repository';
-import { SaleRepository } from 'src/repositories/sale.repository';
-import { UserRepository } from 'src/repositories/user.repository';
+import { Item } from '../../entities/item.entity';
+import { Payment } from '../../entities/payment.entity';
+import { Sale } from '../../entities/sale.entity';
+import { ItemRepository } from '../../repositories/item.repository';
+import { PaymentRepository } from '../../repositories/payment.repository';
+import { SaleRepository } from '../../repositories/sale.repository';
+import { UserRepository } from '../../repositories/user.repository';
 import { UserController } from './user.controller';
 import { UserService } from './user.service';
 
