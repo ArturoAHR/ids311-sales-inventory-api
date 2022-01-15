@@ -13,16 +13,65 @@
 
 **Routes**
 
-- /user
+/user
 
 ```GET /user```
 - Gets all Users
+
 ```GET /user/:id```
 - Get User by ID
+
 ```POST /user```
 - Create User
+
 ```PUT /user/:id```
 - Update User
+
 ```DELETE /user/:id```
 - Delete User
 
+```GET /user/:id/payment```
+- Make Payment with User ID
+
+
+/item
+
+```GET /item```
+- Gets all Items
+
+```GET /item/:id```
+- Get Item by ID
+
+```POST /item```
+- Create Item
+
+```PUT /item/:id```
+- Update Item
+
+```DELETE /item/:id```
+- Delete Item
+
+/payment
+
+```GET /payment```
+- Gets all Payments
+
+```GET /payment/:id```
+- Get Payment by ID
+
+/sale
+
+```GET /sale```
+- Gets all Sales
+
+```GET /sale/:id```
+- Get Sale by ID
+
+```GET /sale/report/daily```
+- Get Report of Sales in one day
+
+```GET /sale/report/weekly```
+- Get Report of Sales in seven days
+
+```GET /sale/report/monthly```
+- Get Report of Sales in thirty days
