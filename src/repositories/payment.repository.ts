@@ -1,5 +1,5 @@
-import { PaymentDTO } from 'src/dto/payment.dto';
-import { assign } from 'src/utils/object-manipulation';
+import { PaymentDTO } from '../dto/payment.dto';
+import { assign } from '../utils/object-manipulation';
 import { EntityRepository, Repository } from 'typeorm';
 import { Payment } from '../entities/payment.entity';
 
