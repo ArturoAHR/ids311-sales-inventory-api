@@ -7,8 +7,8 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { ItemDTO } from 'src/dto/item.dto';
-import { Item } from 'src/entities/item.entity';
+import { ItemDTO } from '../../dto/item.dto';
+import { Item } from '../../entities/item.entity';
 import { ItemService } from './item.service';
 
 @Controller('item')

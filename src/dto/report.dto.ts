@@ -1,5 +1,4 @@
-import { Sale } from 'src/entities/sale.entity';
-import { SaleDTO } from './sale.dto';
+import { Sale } from '../entities/sale.entity';
 
 export class ReportDTO {
   Days: number;

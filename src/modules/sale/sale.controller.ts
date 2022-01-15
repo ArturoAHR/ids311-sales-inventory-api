@@ -1,16 +1,6 @@
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  Param,
-  Post,
-  Put,
-} from '@nestjs/common';
-import { ReportDTO } from 'src/dto/report.dto';
-import { SaleDTO } from 'src/dto/sale.dto';
-import { Payment } from 'src/entities/payment.entity';
-import { Sale } from 'src/entities/sale.entity';
+import { Controller, Get, Param } from '@nestjs/common';
+import { ReportDTO } from '../../dto/report.dto';
+import { Sale } from '../../entities/sale.entity';
 import { SaleService } from './sale.service';
 
 @Controller('sale')

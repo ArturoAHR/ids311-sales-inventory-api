@@ -1,6 +1,6 @@
 import { IsUUID } from 'class-validator';
-import { Item } from 'src/entities/item.entity';
-import { Payment } from 'src/entities/payment.entity';
+import { Item } from '../entities/item.entity';
+import { Payment } from '../entities/payment.entity';
 import { BaseDTO } from './base.dto';
 
 export class SaleDTO extends BaseDTO {

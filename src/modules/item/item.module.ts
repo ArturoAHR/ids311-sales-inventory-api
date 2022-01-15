@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Payment } from 'src/entities/payment.entity';
-import { Sale } from 'src/entities/sale.entity';
-import { User } from 'src/entities/user.entity';
-import { ItemRepository } from 'src/repositories/item.repository';
+import { Payment } from '../../entities/payment.entity';
+import { Sale } from '../../entities/sale.entity';
+import { User } from '../../entities/user.entity';
+import { ItemRepository } from '../../repositories/item.repository';
 import { ItemController } from './item.controller';
 import { ItemService } from './item.service';
 

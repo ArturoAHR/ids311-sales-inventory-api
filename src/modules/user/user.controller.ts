@@ -7,10 +7,10 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { SalesDTO } from 'src/dto/sales.dto';
-import { UserDTO } from 'src/dto/user.dto';
-import { Payment } from 'src/entities/payment.entity';
-import { User } from 'src/entities/user.entity';
+import { SalesDTO } from '../../dto/sales.dto';
+import { UserDTO } from '../../dto/user.dto';
+import { Payment } from '../../entities/payment.entity';
+import { User } from '../../entities/user.entity';
 import { UserService } from './user.service';
 
 @Controller('user')

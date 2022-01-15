@@ -1,17 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { randomUUID } from 'crypto';
-import { ItemDTO } from 'src/dto/item.dto';
-import { PaymentDTO } from 'src/dto/payment.dto';
-import { SaleDTO } from 'src/dto/sale.dto';
-import { SalesDTO } from 'src/dto/sales.dto';
-import { UserDTO } from 'src/dto/user.dto';
-import { Payment } from 'src/entities/payment.entity';
-import { User } from 'src/entities/user.entity';
-import { ItemRepository } from 'src/repositories/item.repository';
-import { PaymentRepository } from 'src/repositories/payment.repository';
-import { SaleRepository } from 'src/repositories/sale.repository';
-import { UserRepository } from 'src/repositories/user.repository';
-import { assign } from 'src/utils/object-manipulation';
+import { ItemDTO } from '../../dto/item.dto';
+import { PaymentDTO } from '../../dto/payment.dto';
+import { SaleDTO } from '../../dto/sale.dto';
+import { SalesDTO } from '../../dto/sales.dto';
+import { UserDTO } from '../../dto/user.dto';
+import { Payment } from '../../entities/payment.entity';
+import { User } from '../../entities/user.entity';
+import { ItemRepository } from '../../repositories/item.repository';
+import { PaymentRepository } from '../../repositories/payment.repository';
+import { SaleRepository } from '../../repositories/sale.repository';
+import { UserRepository } from '../../repositories/user.repository';
+import { assign } from '../../utils/object-manipulation';
 
 @Injectable()
 export class UserService {
