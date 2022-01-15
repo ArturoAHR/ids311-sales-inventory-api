@@ -1,8 +1,16 @@
 import { randomUUID } from 'crypto';
 import { SaleDTO } from '../dto/sale.dto';
 import { assign } from '../utils/object-manipulation';
-import { EntityRepository, Repository } from 'typeorm';
+import {
+  Between,
+  EntityRepository,
+  LessThan,
+  MoreThan,
+  Repository,
+} from 'typeorm';
 import { Sale } from '../entities/sale.entity';
+import { ReportDTO } from 'src/dto/report.dto';
+import { start } from 'repl';
 
 @EntityRepository(Sale)
 export class SaleRepository extends Repository<Sale> {
@@ -32,5 +40,29 @@ export class SaleRepository extends Repository<Sale> {
       //log
       throw error;
     }
+  }
+
+  async getSalesInDays(days: number): Promise<ReportDTO> {
+    const startDate = new Date();
+    const endDate = new Date();
+    startDate.setDate(startDate.getDate() - days);
+    console.log(startDate, endDate);
+    const report = new ReportDTO();
+    report.totalAmount = 0;
+    report.Days = days;
+    const sales = await this.find({
+      where: {
+        creationDate: Between(startDate.toISOString(), endDate.toISOString()),
+      },
+    });
+
+    // ('sales')
+    //   .andWhere(`sales.fechaRegistro BETWEEN ${startDate} AND ${endDate}`)
+    //   .getMany();
+    sales.forEach((sale) => {
+      report.totalAmount += Number(sale.price);
+    });
+    report.sales = { ...sales };
+    return report;
   }
 }
